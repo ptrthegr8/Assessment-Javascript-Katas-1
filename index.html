@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- START -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>KATAS</title>
+    <!-- STYLE -->
+    <style>
+        .bar {
+            background: gray;
+            height: 20px;
+            margin: 10px;
+            color: white;
+        }
+    </style>
+    <!-- STYLE -->
+</head>
+
+<body>
+    <h1>Adding content with document.createElement</h1>
+    <div id="d1"></div>
+    <!-- SCRIPT -->
+    <script>
+        // for (i = 1; i <= 4; i++) {
+        //     // Create a div, with class "bar", and set the width to 100px.
+        //     var newElement = document.createElement("div");
+        //     newElement.className = "bar";
+        //     newElement.style.width = i * 100 + "px";
+
+        //     // Place a text label inside the new div.
+        //     var newText = document.createTextNode("Bar #" + i);
+        //     newElement.appendChild(newText);
+
+        //     // Put the new div on the page inside the existing element "d1".
+        //     var destination = document.getElementById("d1");
+        //     destination.appendChild(newElement);
+        //     // ADDENDUM - START OF KATAS
+        //     const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535,
+        //         940, 472
+        //     ];
+        // }
+
+        1. Display the numbers from 1 to 20. (1, 2, 3, ...,19, 20)
+        for (i=1; i < 21; i++) {
+            document.write(i);
+        }
+        2. Display the even numbers from 1 to 20. (2, 4, 6, ..., 18, 20)
+        for (i=1; i < 21; i++) {
+            if (i%2 === 0) { 
+              document.write(i);
+            }
+            else {
+              document.write("");
+            }
+        }
+        3. Display the odd numbers from 1 to 20. (1, 3, 5, ..., 17, 19)
+        for (i=1; i < 21; i++) {
+             if (i%2 !== 0) { 
+               document.write(i);
+             }
+             else {
+               document.write("");
+             }
+         }
+        4. Display the multiples of 5 up to 100. (5, 10, 15, ..., 95, 100)
+        for (i = 1; i <= 100; i++) {
+            if (i % 5 === 0) {
+               document.write(i);
+            }
+        }
+        5. Display the square numbers (Links to an external site.)Links to an external site. up to 100. (1, 4, 9, ..., 81, 100
+        for (i = 1; i <= 10; i++) {
+            document.write (i*i);
+        }
+        6. Display the numbers counting backwards from 20 to 1. (20, 19, 18, ..., 2, 1)
+        for (i=20; i>=1; i--) {
+            document.write(i);
+        }
+        7. Display the even numbers counting backwards from 20. (20, 18, 16, ..., 4, 2)
+        for (i=20; i >= 1; i--) {
+            if (i%2 === 0) { 
+              document.write(i);
+            }
+        }
+        8. Display the odd numbers from 20 to 1, counting backwards. (19, 17, 15, ..., 3, 1)
+        for (i=20; i >= 1; i--) {
+            if (i%2 !== 0) { 
+              document.write(i);
+            }
+        }
+        9. Display the multiples of 5, counting down from 100. (100, 95, 90, ..., 10, 5)
+           for (i = 100; i >= 1; i--) {
+                if (i % 5 === 0) {
+                   document.write(i);
+                }
+            }
+        10. Display the square numbers, counting down from 100. (100, 81, 64, ..., 4, 1)
+        for (i = 10; i >= 1; i--) {
+            document.write (i*i);
+        }
+        11. Display the 20 elements of sampleArray. (469, 755, 244, ..., 940, 472)
+        const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535,
+                940, 472]
+        console.log(sampleArray);
+        12. Display all the even numbers contained in sampleArray. (244, 758, 450, ..., 940, 472)
+        const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535,
+         940, 472]
+        for (i=0; i < sampleArray.length; i++) {
+            if (sampleArray[i]%2 === 0) {
+                document.write(sampleArray[i]);
+            }
+        }
+        13. Display all the odd numbers contained in sampleArray. (469, 755, 245, ..., 179, 535)
+        const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535,
+         940, 472]
+        for (i=0; i < sampleArray.length; i++) {
+            if (sampleArray[i]%2 !== 0) {
+                document.write(sampleArray[i] + "...");
+            }
+        }
+        14. Display the square of each element in sampleArray. (219961, 570025, ..., 222784)
+        const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535,
+         940, 472]
+         for (i=0; i < sampleArray.length; i++) {
+                document.write(sampleArray[i] * sampleArray[i] + "...");
+         }
+        // 15. Display the sum of all the numbers from 1 to 20.
+        // var sum = 0
+        // for (i=1; i < 21; i++) {
+        //     sum += i;
+        //     console.log(sum);
+        }
+        // To be continued
+    </script>
+    <!-- SCRIPT -->
+</body>
+
+</html>
+<!-- END -->
