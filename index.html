@@ -175,7 +175,7 @@
     </div>
     <div id="d15">
         <h2>
-           15. Display the sum of all the numbers from 1 to 20.
+            15. Display the sum of all the numbers from 1 to 20.
         </h2>
         <script>
             var sum = 0
@@ -197,70 +197,126 @@
         </script>
     </div>
     <div id="d17">
-        <h2>  17.Display the smallest element in sampleArray.</h2>
+        <h2> 17.Display the smallest element in sampleArray.</h2>
         <script>
-        // const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940,
-        //     472
-        // ]
-        function myArrayMin(arr) {
-            return Math.min.apply(null, arr);
-        }
-        document.write(myArrayMin(sampleArray));
+            // const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940,
+            //     472
+            // ]
+            function myArrayMin(arr) {
+                return Math.min.apply(null, arr);
+            }
+            document.write(myArrayMin(sampleArray));
         </script>
     </div>
     <div id="d18">
         <h2>18.Display the largest element in sampleArray.</h2>
         <script>
-                // const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940,
-                //     472
-                // ]
-                function myArrayMax(arr) {
-                    return Math.max.apply(null, arr);
-                }
-                document.write(myArrayMax(sampleArray));
-
-                </script>
+            // const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940,
+            //     472
+            // ]
+            function myArrayMax(arr) {
+                return Math.max.apply(null, arr);
+            }
+            document.write(myArrayMax(sampleArray));
+        </script>
     </div>
     <div id="d19">
+        <hr>
         <h2>19.Display 20 solid gray rectangles, each 20px high and 100px wide.</h2>
-        <script> 
-                for (i=1; i < 21; i++){
+        <script>
+            for (i = 1; i < 21; i++) {
                 var newElement = document.createElement("div");
-                    newElement.className = "box";
-                    newElement.style.width = 100 + "px";
-                    newElement.style.height = 20 + "px";
-                    newElement.style.backgroundColor = "gray";
+                newElement.className = "box";
+                newElement.style.width = 100 + "px";
+                newElement.style.height = 20 + "px";
+                newElement.style.backgroundColor = "gray";
                 var destination = document.getElementById("d19");
                 destination.appendChild(newElement);
-                }
-                    destination.appendChild(newElement);
-                </script>
+            }
+            destination.appendChild(newElement);
+        </script>
     </div>
     <div id="d20">
-        <h2>20.Display 20 solid gray rectangles, each 20px high, with widths ranging evenly from 105px to 200px (remember #4, above).</h2>
+        <hr>
+        <h2>20.Display 20 solid gray rectangles, each 20px high, with widths ranging evenly from 105px to 200px (remember #4,
+            above).
+        </h2>
         <script>
-            for (i=1; i <= 20; i++){
-        var newElement = document.createElement("div");
-            newElement.className = "box";
-            newElement.style.width = 
-            newElement.style.height =  + "px";
-            newElement.style.backgroundColor = "gray";
-        var destination = document.getElementById("d20");
-        destination.appendChild(newElement) 
+            var boxWidth = 100;
+            for (i = 1; i <= 20; i++) {
+                var newElement = document.createElement("div");
+                newElement.className = "box";
+                newElement.style.width = (boxWidth += 5) + "px";
+                newElement.style.height = 20 + "px";
+                newElement.style.backgroundColor = "gray";
+                var destination = document.getElementById("d20");
+                destination.appendChild(newElement)
             }
         </script>
     </div>
     <div id="d21">
+        <hr>
         <h2>21.Display 20 solid gray rectangles, each 20px high, with widths in pixels given by the 20 elements of sampleArray.</h2>
-        <script></script>
+        <script>
+            // const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940,
+            //     472
+            // ]
+            for (i = 1; i <= 20; i++) {
+                var newElement = document.createElement("div");
+                newElement.className = "box";
+                newElement.style.width = (sampleArray[i]) + "px";
+                newElement.style.height = 20 + "px";
+                newElement.style.backgroundColor = "gray";
+                var destination = document.getElementById("d21");
+                destination.appendChild(newElement)
+            }
+        </script>
     </div>
     <div id="d22">
+        <hr>
         <h2>22.As in #21, but alternate colors so that every other rectangle is red.</h2>
-        <script></script>
+        <script>
+        // const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940,
+            //     472
+            // ]
+            for (i = 1; i <= 20; i++) {
+                var newElement = document.createElement("div");
+                newElement.className = "box";
+                newElement.style.width = (sampleArray[i]) + "px";
+                newElement.style.height = 20 + "px";
+                if (i % 2 !== 0){
+                    newElement.style.backgroundColor = "lightgray";
+                } else {
+                    newElement.style.backgroundColor = "red";
+                }
+                var destination = document.getElementById("d22");
+                destination.appendChild(newElement)
+            }
+        </script>
     </div>
     <div id="d23">
+        <hr>
         <h2>23.As in #21, but color the rectangles with even widths red.</h2>
-        <script></script>
+      
+        <script>
+        // const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940,
+            //     472
+            // ]
+            for (i = 1; i <= 20; i++) {
+                var newElement = document.createElement("div");
+                newElement.className = "box";
+                newElement.style.width = (sampleArray[i]) + "px";
+                newElement.style.height = 20 + "px";
+                if ((sampleArray[i]) % 2 === 0)  {
+                    newElement.style.backgroundColor = "red";
+                } else {
+                    newElement.style.backgroundColor = "white";
+                }
+                var destination = document.getElementById("d23");
+                destination.appendChild(newElement)
+            }
+        
+        </script>
     </div>
     <!-- SCRIPT -->
     <script>
@@ -281,15 +337,6 @@
 
 
         // ADDENDUM - START OF KATAS
-
-        
-       
-        
-        
-
-        
-
-        
     </script>
     <!-- SCRIPT -->
 </body>
